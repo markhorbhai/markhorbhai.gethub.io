@@ -1,1 +1,196 @@
-Welcome To My Website
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Adeel Ahmed: Law, Politics, Markets and Code</title>
+<meta name="description" content="Portfolio of Adeel Ahmed: law and advocacy, politics, trading, coding, Microsoft Excel, digital marketing and social media.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F6F4; --ink:#121A18; --muted:#4A5753; --line:#C9D1CD;
+  --pine:#0E3B36; --on-pine:#EEF3F0; --brass:#D9B25F; --link:#0E3B36;
+  --display:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;
+  --body:"Newsreader",Georgia,"Times New Roman",serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0C1513;--ink:#E8EEEB;--muted:#A3B0AB;--line:#26332F;--link:#D9B25F}
+}
+:root[data-theme="dark"]{--bg:#0C1513;--ink:#E8EEEB;--muted:#A3B0AB;--line:#26332F;--link:#D9B25F}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--pine);scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.125rem;line-height:1.7}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.wrap{width:100%;max-width:1100px;margin-inline:auto;padding-inline:clamp(1.25rem,5vw,2.5rem)}
+.skip{position:absolute;left:-999px;top:0;background:var(--brass);color:#121A18;padding:.6rem 1rem;z-index:5}
+.skip:focus{left:1rem}
+
+/* Hero */
+.hero{background:var(--pine);color:var(--on-pine);padding-bottom:clamp(3rem,8vw,6rem)}
+.bar{display:flex;flex-wrap:wrap;gap:.5rem 2rem;justify-content:space-between;align-items:baseline;padding-block:1.5rem;font-family:var(--display);font-weight:500;font-size:1rem}
+.bar a{color:var(--on-pine);text-decoration:none}
+.bar a:hover{text-decoration:underline;text-underline-offset:5px}
+.bar nav{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem}
+.hero h1{font-family:var(--display);font-weight:800;line-height:.92;letter-spacing:-.035em;font-size:clamp(3.4rem,15.5vw,10.5rem);margin:clamp(2.5rem,9vw,6rem) 0 1.5rem;overflow-wrap:anywhere;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero h1 span{display:block}
+.rule{height:3px;width:min(180px,40%);background:var(--brass);border:0;margin:0 0 1.5rem}
+.lede{font-size:clamp(1.25rem,2.6vw,1.6rem);line-height:1.5;max-width:34em;margin:0 0 2rem}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;font-family:var(--display);font-weight:700;font-size:1rem;text-decoration:none;padding:.85rem 1.5rem;border-radius:4px;border:2px solid var(--brass)}
+.btn.fill{background:var(--brass);color:#121A18}
+.btn.line{color:var(--on-pine)}
+.btn:hover{transform:translateY(-2px)}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+/* Sections */
+section{padding-block:clamp(3.5rem,9vw,6.5rem)}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;letter-spacing:-.02em;margin:0 0 1rem}
+.intro{color:var(--muted);max-width:36em;margin:0 0 2.5rem}
+
+/* Disciplines list */
+.list{border-top:2px solid var(--ink)}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.15rem 0;font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,4.4vw,2.7rem);line-height:1.1;letter-spacing:-.015em}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-weight:500;font-size:1.6em;line-height:1;color:var(--link);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+summary:hover{color:var(--link)}
+.more{padding:0 0 1.75rem;max-width:38em}
+.more p{margin:0 0 .75rem}
+.more ul{margin:0;padding-left:1.2rem;color:var(--muted)}
+
+/* About + contact */
+.about{background:color-mix(in srgb,var(--line) 35%,var(--bg))}
+.cols{display:grid;gap:2rem;grid-template-columns:1fr}
+.cols p{margin:0 0 1rem;max-width:36em}
+.links{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;margin:1.5rem 0 0;padding:0;list-style:none;font-family:var(--display);font-weight:500}
+.mail{font-family:var(--display);font-weight:700;font-size:clamp(1.3rem,4vw,2.1rem);overflow-wrap:anywhere}
+footer{background:var(--pine);color:var(--on-pine);padding-block:2rem;font-size:.95rem}
+footer p{margin:0;max-width:44em}
+@media (min-width:820px){.cols{grid-template-columns:5fr 7fr;gap:4rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero h1{animation:none}.btn:hover{transform:none}summary::after{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#disciplines">Skip to content</a>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="bar">
+      <a href="#top">Adeel Ahmed</a>
+      <nav aria-label="Main">
+        <a href="#disciplines">Disciplines</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <h1 id="top"><span>Adeel</span><span>Ahmed</span></h1>
+    <hr class="rule">
+    <p class="lede">I work where law, public life, financial markets and the internet meet: arguing, analysing, building and publishing.</p>
+    <div class="actions">
+      <a class="btn fill" href="#disciplines">See what I do</a>
+      <a class="btn line" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="disciplines">
+    <div class="wrap">
+      <h2>Disciplines</h2>
+      <p class="intro">Seven areas I work in. Select one to see the kind of work it covers.</p>
+      <div class="list">
+        <details open>
+          <summary>Law and advocacy</summary>
+          <div class="more">
+            <p>Clear legal research, drafting and argument, for clients and for causes that need a strong voice.</p>
+            <ul><li>Legal research and opinions</li><li>Drafting and review of documents</li><li>Advocacy and public representation</li></ul>
+          </div>
+        </details>
+        <details>
+          <summary>Politics</summary>
+          <div class="more">
+            <p>Following policy and political debate closely, and explaining it in plain language.</p>
+            <ul><li>Policy and issue analysis</li><li>Public commentary</li><li>Campaign and community engagement</li></ul>
+          </div>
+        </details>
+        <details>
+          <summary>Trading</summary>
+          <div class="more">
+            <p>Reading price, risk and positioning, with a written plan and defined risk on every trade.</p>
+            <ul><li>Technical and market analysis</li><li>Risk and position management</li><li>Trade journaling and review</li></ul>
+          </div>
+        </details>
+        <details>
+          <summary>Coding</summary>
+          <div class="more">
+            <p>Building websites, automations and small tools that solve one problem well.</p>
+            <ul><li>Responsive websites in HTML and CSS</li><li>Scripts that automate routine work</li><li>Prototypes and internal tools</li></ul>
+          </div>
+        </details>
+        <details>
+          <summary>Microsoft Excel</summary>
+          <div class="more">
+            <p>Models, dashboards and clean data that other people can read and trust.</p>
+            <ul><li>Formulas, pivot tables and reports</li><li>Trading and budget trackers</li><li>Data cleaning and validation</li></ul>
+          </div>
+        </details>
+        <details>
+          <summary>Digital marketing</summary>
+          <div class="more">
+            <p>Content, search and campaigns that reach the right audience and show what worked.</p>
+            <ul><li>Content and campaign planning</li><li>Audience research and targeting</li><li>Performance tracking and reporting</li></ul>
+          </div>
+        </details>
+        <details>
+          <summary>Social media influencing</summary>
+          <div class="more">
+            <p>Building an audience and a voice that people trust, one honest post at a time.</p>
+            <ul><li>Content creation for social platforms</li><li>Community building</li><li>Brand and cause collaborations</li></ul>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap cols">
+      <h2>About</h2>
+      <div>
+        <p>I split my time between legal and advocacy work, following politics, trading markets and building things online. They look unrelated, but they share a habit: start with evidence, write down the argument, then test it against reality.</p>
+        <p>The same habit shapes my work with Excel, code and digital marketing. A good model, a clean script and a clear campaign all begin with a precise question.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap cols">
+      <h2>Work with me</h2>
+      <div>
+        <p>For legal and advocacy matters, trading and data projects, websites, or marketing and collaborations, send a short note about what you need.</p>
+        <!-- Replace the placeholder email and the # links below with your real details. -->
+        <p><a class="mail" href="mailto:hello@example.com">hello@example.com</a></p>
+        <ul class="links">
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">X</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Adeel Ahmed. Nothing on this site is legal or financial advice.</p>
+  </div>
+</footer>
+</body>
+</html>
